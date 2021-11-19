@@ -1,24 +1,34 @@
-import { Component } from 'react'
-import { View, Text } from '@tarojs/components'
-import './index.scss'
+import { Component } from "react";
+import { View, Text, Button, Navigator } from "@tarojs/components";
+import "./index.scss";
+import Taro from "@tarojs/taro";
 
 export default class Index extends Component {
+  componentWillMount() {}
 
-  componentWillMount () { }
+  componentDidMount() {}
 
-  componentDidMount () { }
+  componentWillUnmount() {}
 
-  componentWillUnmount () { }
+  componentDidShow() {}
 
-  componentDidShow () { }
+  componentDidHide() {}
 
-  componentDidHide () { }
-
-  render () {
+  render() {
     return (
-      <View className='index'>
-        <Text>Hello world!</Text>
+      <View className="index">
+        <View className="myFrist">这是我的第一个小程序项目</View>
+        <Button
+          type="warn"
+          onClick={() => {
+            Taro.navigateTo({
+              url: "/pages/action/index",
+            });
+          }}
+        >
+          跳转
+        </Button>
       </View>
-    )
+    );
   }
 }
