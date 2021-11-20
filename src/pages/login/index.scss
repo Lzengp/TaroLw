@@ -1,0 +1,36 @@
+.loginWarp {
+  background-color: #ffffff;
+  height: 100%;
+
+  .avatarsImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+
+  }
+
+  .promptInfo {
+    color: red;
+    margin-left: 1rem;
+    font-size: 0.5rem;
+  }
+
+  .signInBtn {
+    margin: 30px;
+  }
+
+  .relevantInfo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 2rem;
+    font-size: 0.5rem;
+    color: #ccccd6;
+
+    .privacy {
+      margin: 0 2rem;
+    }
+  }
+}
