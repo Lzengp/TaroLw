@@ -1,0 +1,155 @@
+.memberCenter {
+  background-color: #f7f7f7;
+
+  .topContent {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    width: 100%;
+    height: 3rem;
+    background-color: #ffffff;
+    z-index: 1;
+
+    .personalInfo {
+      display: flex;
+
+      .textInfo {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0.8rem;
+
+        .nickname {
+          font-weight: 600;
+        }
+
+        .detailInfo {
+          margin-top: 0.3rem;
+          color: #9b9999;
+          font-size: 0.2rem;
+        }
+      }
+    }
+
+    .topContentBtn {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 2rem;
+
+      .singIn {
+        color: #ffffff;
+        background: -webkit-linear-gradient(#fd608a, #f53577);
+        border-radius: 2rem;
+        font-size: 0.9rem;
+        width: 4rem;
+        height: 1.8rem;
+        line-height: 1.8rem;
+        margin: auto;
+        text-align: center;
+      }
+    }
+  }
+
+  .mainContent {
+    padding-top: 3rem;
+
+    .goodsSwiper {
+      height: 15rem;
+
+      image {
+        overflow: hidden;
+        width: 100%;
+      }
+    }
+
+    // 指示点样式
+    .spot-pagination {
+      position: absolute;
+      left: 49%; // 使用left居中展示需要提前知道指示点view的大小，然后适当的调整left的占比
+      margin-top: -3rem;
+      display: flex;
+      justify-content: center;
+
+      .spot-pagination-bullet {
+        margin-right: 0.5rem;
+        border-radius: 50%;
+        height: 0.5rem;
+        width: 0.5rem;
+        background: #ccc
+      }
+
+      // 当前指示点样式
+      .spot-pagination-bullet-active {
+        background-color: #ff6a8f;
+        border-radius: 0.2rem;
+        height: 0.5rem;
+        width: 1.5rem;
+      }
+    }
+
+    .membershipCardInfo {
+      position: relative;
+      top: -1.7rem;
+      width: 92%;
+      height: 15rem;
+      background-color: red;
+      margin: 0 1rem;
+      border-radius: 1rem;
+      background-color: #ffffff;
+
+      .summaryInfo {
+        display: flex;
+        justify-content: space-around;
+
+        .summaryItemInfo {
+          display: flex;
+          flex-direction: column;
+          padding-top: 1rem;
+          text-align: center;
+
+          .itemNumInfo {
+            font-weight: 600;
+          }
+
+          .itemTextInfo {
+            color: #a2a2a2;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .membershipCard {
+        background-image: url("https://img0.baidu.com/it/u=23148888,3978416562&fm=26&fmt=auto");
+        background-repeat: no-repeat;
+        width: 95%;
+        height: 11rem;
+        border-radius: 1rem;
+        margin: 0.5rem;
+        color: #ffffff;
+
+        .topCard {
+          display: flex;
+          justify-content: space-around;
+          padding-top: 1rem;
+
+          .noDiscount {
+            background: #e44079;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            width: 4rem;
+            height: 1.8rem;
+            line-height: 1.8rem;
+            text-align: center;
+          }
+        }
+
+        .cardNum {
+          font-weight: 600;
+          margin: 5rem 0 0 2rem;
+        }
+      }
+
+    }
+
+  }
+}
