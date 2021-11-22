@@ -13,10 +13,10 @@ const rotateImg = [
   "https://imgcps.jd.com/ling4/100014234328/5Liq5oqk54iG5qy-5aW954mp/54iG5qy-56ys5LqM5Lu25Y2K5Lu3/p-5bd8253082acdd181d02fa68/d1453fcb/cr/s/q.jpg",
 ];
 
-interface MainProps {}
+interface MainProps { }
 
 function Main(props: MainProps) {
-  const {} = props;
+  const { } = props;
   const [currentIndicator, setCurrentIndicator] = useState<number>(0);
 
   return (
@@ -107,7 +107,21 @@ function Main(props: MainProps) {
           </View>
         </MyCard>
         {/**会员权益 */}
-        <MyCard upperLeft={<View style={{ margin: "0.5rem" }}>会员权益</View>}>
+        <MyCard
+          style={{ position: 'relative', top: '-1rem' }}
+          upperLeft={
+            <View style={{ margin: "0.8rem 0.5rem", }}>
+              <Text style={{ marginRight: '0.2rem' }}>会员权益</Text>
+              <AtIcon value="help" size="13" color="#b2b2b2" />
+            </View>
+          }
+          upperRight={
+            <View style={{ margin: "0.8rem 0.5rem", fontSize: '0.8rem', color: '#b2b2b2' }}>
+              如何升级/降级保级
+              <AtIcon value="chevron-right" size="10" />
+            </View>
+          }
+        >
           <View className="membershipInterests">
             <AtGrid
               mode="rect"
