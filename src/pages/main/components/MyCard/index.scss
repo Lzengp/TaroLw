@@ -1,0 +1,13 @@
+.myCard {
+    width: 92%;
+    height: auto;
+    margin: 0 1rem;
+    padding: 0.1rem;
+    border-radius: 1rem;
+    background-color: #ffffff;
+
+    .myCardUpperContent {
+        display: flex;
+        justify-content: space-between;
+    }
+}

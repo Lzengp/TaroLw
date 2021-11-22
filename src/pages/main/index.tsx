@@ -1,8 +1,10 @@
 /**首页 */
 import { View, Image, Swiper, SwiperItem, Text } from "@tarojs/components";
 import "./index.scss";
-import { AtList, AtListItem, AtAvatar, AtIcon, AtCurtain } from "taro-ui";
+import { AtList, AtListItem, AtAvatar, AtIcon, AtGrid, AtBadge } from "taro-ui";
 import { useState } from "react";
+
+import MyCard from "./components/MyCard";
 
 /**轮播图片 */
 const rotateImg = [
@@ -15,24 +17,10 @@ interface MainProps {}
 
 function Main(props: MainProps) {
   const {} = props;
-  const [isOpened, setIsOpened] = useState(true);
   const [currentIndicator, setCurrentIndicator] = useState<number>(0);
 
   return (
     <View className="memberCenter">
-      <AtCurtain
-        isOpened={isOpened}
-        onClose={() => setIsOpened(false)}
-        closeBtnPosition="bottom"
-      >
-        <Image
-          style="width:100%;height:250px"
-          src="https://taro-ui.jd.com/h5/static/images/curtain.png"
-        />
-      </AtCurtain>
-      {/* <AtNoticebar marquee close>
-        这是 NoticeBar 通告栏，这是 NoticeBar 通告栏，这是 NoticeBar 通告栏
-      </AtNoticebar> */}
       <View className="topContent">
         <View className="personalInfo">
           <AtAvatar
@@ -88,7 +76,7 @@ function Main(props: MainProps) {
             />
           ))}
         </View>
-        <View className="membershipCardInfo">
+        <MyCard style={{ position: "relative", top: "-1.7rem" }}>
           <View className="summaryInfo">
             <View className="summaryItemInfo">
               <Text className="itemNumInfo"> 117 </Text>
@@ -117,7 +105,56 @@ function Main(props: MainProps) {
             </View>
             <View className="cardNum">GH986598</View>
           </View>
-        </View>
+        </MyCard>
+        {/**会员权益 */}
+        <MyCard upperLeft={<View style={{ margin: "0.5rem" }}>会员权益</View>}>
+          <View className="membershipInterests">
+            <AtGrid
+              mode="rect"
+              hasBorder={false}
+              columnNum={4}
+              data={[
+                {
+                  // iconInfo: {}
+                  image:
+                    "https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png",
+                  value: "会员抽奖",
+                },
+                {
+                  image:
+                    "https://img20.360buyimg.com/jdphoto/s72x72_jfs/t15151/308/1012305375/2300/536ee6ef/5a411466N040a074b.png",
+                  value: "福币兑换",
+                },
+                {
+                  image:
+                    "https://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png",
+                  value: "商家联盟",
+                },
+                {
+                  image:
+                    "https://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png",
+                  value: "包邮卡",
+                },
+                {
+                  image:
+                    "https://img14.360buyimg.com/jdphoto/s72x72_jfs/t17251/336/1311038817/3177/72595a07/5ac44618Na1db7b09.png",
+                  value: "生日礼包",
+                },
+                {
+                  image:
+                    "https://img30.360buyimg.com/jdphoto/s72x72_jfs/t5770/97/5184449507/2423/294d5f95/595c3b4dNbc6bc95d.png",
+                  value: "退货补偿卷",
+                },
+              ]}
+            />
+            {/* <AtGridItem></AtGridItem> */}
+            {/* </AtGrid> */}
+            {/* <AtBadge value={10} maxValue={99}>
+              <Text>我的</Text>
+            </AtBadge> */}
+          </View>
+        </MyCard>
+
         <AtList>
           {new Array(20)
             .fill({

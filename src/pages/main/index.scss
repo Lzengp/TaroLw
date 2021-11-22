@@ -75,7 +75,7 @@
         border-radius: 50%;
         height: 0.5rem;
         width: 0.5rem;
-        background: #ccc
+        background: #ccc;
       }
 
       // 当前指示点样式
@@ -87,69 +87,66 @@
       }
     }
 
-    .membershipCardInfo {
-      position: relative;
-      top: -1.7rem;
-      width: 92%;
-      height: 15rem;
-      background-color: red;
-      margin: 0 1rem;
-      border-radius: 1rem;
-      background-color: #ffffff;
+    .summaryInfo {
+      display: flex;
+      justify-content: space-around;
 
-      .summaryInfo {
+      .summaryItemInfo {
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        padding-top: 1rem;
+        text-align: center;
 
-        .summaryItemInfo {
-          display: flex;
-          flex-direction: column;
-          padding-top: 1rem;
-          text-align: center;
-
-          .itemNumInfo {
-            font-weight: 600;
-          }
-
-          .itemTextInfo {
-            color: #a2a2a2;
-            font-size: 0.8rem;
-          }
-        }
-      }
-
-      .membershipCard {
-        background-image: url("https://img0.baidu.com/it/u=23148888,3978416562&fm=26&fmt=auto");
-        background-repeat: no-repeat;
-        width: 95%;
-        height: 11rem;
-        border-radius: 1rem;
-        margin: 0.5rem;
-        color: #ffffff;
-
-        .topCard {
-          display: flex;
-          justify-content: space-around;
-          padding-top: 1rem;
-
-          .noDiscount {
-            background: #e44079;
-            border-radius: 2rem;
-            font-size: 0.9rem;
-            width: 4rem;
-            height: 1.8rem;
-            line-height: 1.8rem;
-            text-align: center;
-          }
-        }
-
-        .cardNum {
+        .itemNumInfo {
           font-weight: 600;
-          margin: 5rem 0 0 2rem;
+        }
+
+        .itemTextInfo {
+          color: #a2a2a2;
+          font-size: 0.8rem;
         }
       }
-
     }
 
+    .membershipCard {
+      background-image: url("https://img0.baidu.com/it/u=23148888,3978416562&fm=26&fmt=auto");
+      background-repeat: no-repeat;
+      height: 11rem;
+      border-radius: 1rem;
+      margin: 0.5rem;
+      color: #ffffff;
+
+      .topCard {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1rem;
+
+        .noDiscount {
+          background: #e44079;
+          border-radius: 2rem;
+          font-size: 0.9rem;
+          width: 4rem;
+          height: 1.8rem;
+          line-height: 1.8rem;
+          text-align: center;
+        }
+      }
+
+      .cardNum {
+        font-weight: 600;
+        margin: 5rem 0 0 2rem;
+      }
+    }
+
+    .membershipInterests {
+      .at-grid-item__content-inner {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content-inner__text {
+        font-size: 0.8rem;
+      }
+    }
   }
 }
