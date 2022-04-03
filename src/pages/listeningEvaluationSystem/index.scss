@@ -1,0 +1,23 @@
+.classSystemWrap {
+  .appContent {
+    margin-bottom: 5.5rem;
+    position: relative;
+  }
+  .icon-yonhu,
+  .icon-xiezi,
+  .icon-tongji,
+  .icon-pinglun,
+  .icon-yonhu {
+    font-size: 48px;
+  }
+
+  .at-tabs__header {
+      position: fixed;
+      z-index: 100;
+      top: -1px;
+  }
+
+  .at-tabs__body {
+      margin-top: 90px;
+  }
+}

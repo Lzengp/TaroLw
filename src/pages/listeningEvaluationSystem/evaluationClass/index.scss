@@ -1,0 +1,142 @@
+.evaluationClassWarp {
+  background-color: #f6f6f6;
+  .searchAtInput {
+    background-color: #f6f6f6;
+    border-radius: 1rem;
+  }
+
+  .searchAtButton {
+    border-radius: 1.5rem;
+  }
+
+  .atDivider {
+    height: 2rem;
+  }
+
+  .addOpenClassIcon {
+    position: fixed;
+    display: flex;
+    bottom: 10rem;
+    color: #3296fa;
+    right: 2rem;
+    z-index: 100;
+  }
+
+  .evaluteTimeContent {
+    margin: 0.6rem 0;
+    background-color: #fff;
+    padding-bottom: 20px;
+
+    .totalEvaluateTimes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px 0;
+    }
+
+    .allItemEvaluateTimes {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .itemEvaluateTimes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .evaluteTimeResult {
+      background-color: #f2f2f2;
+      height: 3rem;
+      line-height: 3rem;
+      padding: 0 5%;
+      margin: 3% 5%;
+    }
+  }
+
+  .evaluteTeacherContent {
+    background-color: #fff;
+    padding: 2rem 0;
+
+    .diyimingStyle {
+      color: #ef9355;
+      margin-bottom: -0.7rem;
+    }
+
+    .myAtAvatarDiyi {
+      border: 0.3rem solid #f49c5c;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    .myAtAvatarDier {
+      border: 0.3rem solid #f6b02d;
+    }
+
+    .myAtAvatarDisan {
+      border: 0.3rem solid #80a3bb;
+    }
+
+    .allResAvatar {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      padding-bottom: 2rem;
+
+      .resAvatar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .resNumber {
+        border: 0.1rem solid #f1874b;
+        background: #f1874b;
+        border-radius: 50%;
+        color: #fff;
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -1.2rem;
+      }
+
+      .resNumberDier {
+        border: 0.1rem solid #fcb955;
+        background: #fcb955;
+        border-radius: 50%;
+        color: #fff;
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -1.2rem;
+      }
+
+      .resNumberDisan {
+        border: 0.1rem solid #94b6b7;
+        background: #94b6b7;
+        border-radius: 50%;
+        color: #fff;
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -1.2rem;
+      }
+    }
+
+    .evaluteTeacherResult {
+      background-color: #f2f2f2;
+      height: 3rem;
+      line-height: 3rem;
+      padding: 0 5%;
+      margin: 0 5%;
+    }
+  }
+}

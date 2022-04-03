@@ -1,0 +1,33 @@
+.teachingSubjectsWrap {
+  background: #f6f6f6;
+  padding: 20px 0;
+
+  .selectedTeachingSubject {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .selectedSubjectPoint {
+    width: 20px;
+    height: 20px;
+    background-color: #15bc83;
+    border-radius: 50%;
+  }
+
+  .highSchoolSubjectsAtListItem {
+    color: #15bc83;
+  }
+
+  .item-content__info-title {
+    text-align: center;
+  }
+
+  .teachingSubjectsButton {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0rem;
+    height: 5rem;
+    width: 15rem;
+  }
+}

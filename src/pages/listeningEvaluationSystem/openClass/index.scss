@@ -1,0 +1,28 @@
+.openClassWarp {
+  .searchAtInput {
+    background-color: #f6f6f6;
+    border-radius: 1rem;
+  }
+
+  .searchAtButton {
+    border-radius: 1.5rem;
+  }
+
+  .atDivider {
+    height: 2rem;
+  }
+
+  .myAtAvatar {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .addOpenClassIcon {
+    position: fixed;
+    display: flex;
+    bottom: 10rem;
+    color: #3296fa;
+    right: 2rem;
+    z-index: 100;
+  }
+}

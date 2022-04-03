@@ -1,7 +1,7 @@
 /**首页 */
 import { View, Image, Swiper, SwiperItem, Text } from "@tarojs/components";
 import "./index.scss";
-import { AtAvatar, AtIcon, AtGrid } from "taro-ui";
+import { AtAvatar, AtIcon, AtGrid, AtTabBar } from "taro-ui";
 import { useState } from "react";
 
 import MyCard from "./components/MyCard";
@@ -18,6 +18,7 @@ interface MainProps {}
 function Main(props: MainProps) {
   const {} = props;
   const [currentIndicator, setCurrentIndicator] = useState<number>(0);
+  const [currentTabBar, setCurrentTabBar] = useState<number>(0);
 
   return (
     <View className="memberCenter">
@@ -29,7 +30,7 @@ function Main(props: MainProps) {
             size="small"
           />
           <View className="textInfo">
-            <Text className="nickname">拾玖</Text>
+            <Text className="nickname">拾玖11</Text>
             <Text className="detailInfo">
               点击查看资料
               <AtIcon value="chevron-right" size="10" />
@@ -251,7 +252,7 @@ function Main(props: MainProps) {
         </AtList> */}
       </View>
       {/**底部导航栏 */}
-      <View className="bottomNavigation">
+      {/* <View className="bottomNavigation">
         <View className="bottomNavigationCenter">
           <AtIcon value="money" size="30" color="#FFF"></AtIcon>
           会员卡
@@ -264,7 +265,24 @@ function Main(props: MainProps) {
           <AtIcon value="camera" size="35" color="#c0c0bf"></AtIcon>
           生活
         </View>
-      </View>
+      </View> */}
+      <AtTabBar
+        fixed
+        tabList={[
+          {
+            title: "自定义图标",
+            // iconPrefixClass: "fa",
+            iconType: "camera",
+            text: "new",
+          },
+          { title: "拍照", iconType: "camera" },
+          { title: "文件夹", iconType: "folder", text: "100", max: 99 },
+        ]}
+        onClick={(e) => {
+          setCurrentTabBar(e);
+        }}
+        current={currentTabBar}
+      />
     </View>
   );
 }
