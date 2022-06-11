@@ -1,6 +1,60 @@
-.statisticsWarp {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.beRatedClassWarp {
+  background-color: #f6f6f6;
+
+  .diyimingStyle {
+    color: #fd7349;
+  }
+
+  .diermingStyle {
+    color: #ffd301;
+  }
+
+  .disanmingStyle {
+    color: #bfad6f;
+  }
+
+  .myAtAvatarDisan {
+    margin: 0 0.5rem 0 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+
+  .evaluteTimeContent {
+    margin: 0.6rem 0;
+    background-color: #fff;
+    padding-bottom: 20px;
+
+    .totalEvaluateTimes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px 0;
+    }
+
+    .allItemEvaluateTimes {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .itemEvaluateTimes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .evaluteTimeResult {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f2f2f2;
+      height: 3rem;
+      line-height: 3rem;
+      padding: 0 5%;
+      margin: 3% 5%;
+    }
+  }
+
 }

@@ -1,8 +1,10 @@
 export default {
   pages: [
+ 
     "pages/listeningEvaluationSystem/index",
     "pages/login/index",
     "pages/listeningEvaluationSystem/openClass/components/addOpenClass/index",
+    "pages/listeningEvaluationSystem/statistics/components/recordView/index",
     // 'pages/listeningEvaluationSystem/index',
     "pages/main/index",
     "pages/relevantInfo/index",

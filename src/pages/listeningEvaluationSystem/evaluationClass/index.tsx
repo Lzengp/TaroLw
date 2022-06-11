@@ -124,7 +124,9 @@ const EvaluationClass = () => {
                 <View style={{ color: "#bebfc1" }}>12次</View>
               </View>
             </View>
-            <View className="evaluteTeacherResult">您共评价了86教师！</View>
+            <View className="evaluteTeacherResult">
+                您共评价了86教师！
+                <AtIcon value='chevron-right' size='23' color='#b5b5b5'></AtIcon></View>
           </View>
         </AtTabsPane>
       </AtTabs>

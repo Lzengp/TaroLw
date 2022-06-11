@@ -20,35 +20,47 @@ const Bar = (props: BarPRops) => {
       canvas.setChart(chart);
       const option = {
         // title: {
-        //   text: "ECharts 入门示例",
+        //   text: 'Stacked Line'
         // },
         tooltip: {
-          // type: 'showTip',
-          // type: 'hideTip'
-          // formatter: (params) => {
-          //   console.log(params);
-          //   return `评课次数 ${<div>{params.value}</div>}`
-          // }
+          trigger: 'axis'
         },
-        // legend: {
-        //   data: ["评课次数"],
-        // },
-        color: ["#38a0ff"], // 柱子颜色
+        legend: {
+          data: ['评课次数', '被评课人数']
+        },
+        grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+        },
+        toolbox: {
+          feature: {
+            saveAsImage: {}
+          }
+        },
         xAxis: {
-          data: ["5月", "6月", "7月", "8月", "9月", "10月"],
+          type: 'category',
+          boundaryGap: false,
+          data: ['5月', '6月', '7月', '8月', '9月', '10月']
         },
-        yAxis: {},
+        yAxis: {
+          // type: 'value'
+        },
         series: [
           {
-            name: "评课次数",
-            type: "bar",
-            label: {
-                show: labelShow,
-                // position: 'inside'
-              },
-            data: [6, 9, 3, 0, 5, 8],
+            name: '评课次数',
+            type: 'line',
+            // stack: 'Total',
+            data: [500, 600, 450, 0, 300, 400]
           },
-        ],
+          {
+            name: '被评课人数',
+            type: 'line',
+            // stack: 'Total',
+            data: [50, 100, 90, 0, 45, 85]
+          },
+        ]
       };
       chart.setOption(option);
       return chart;

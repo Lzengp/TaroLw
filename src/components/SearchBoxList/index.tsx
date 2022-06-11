@@ -4,15 +4,18 @@ import "./index.scss";
 
 interface dataSources {
   headPortrait?: string; // 头像
-  teacherName: string; // 老师名称
+  teacherName?: string; // 老师名称
   topic: string; // 课题
-  teachingSubjects: string; // 任教科目
-  ageClass: string; // 年纪班级
-  teachingTime: string; // 授课时间
-  teachingPlace: string; // 授课地点
+  teachingSubjects?: string; // 任教科目
+  ageClass?: string; // 年纪班级
+  teachingTime?: string; // 授课时间
+  teachingPlace?: string; // 授课地点
   isRead?: boolean | null; // 是否已读
   topicType?: string | null; // 课题类型 （公开课）
   evaluatedNum?: number | null; // 已经评课人数
+  totalAverageScore?: number; // 总平均分
+  numberEvaluators?: number; // 评课人数
+
 }
 
 interface SearchBoxListProps {
@@ -70,7 +73,7 @@ const SearchBoxList = (props: SearchBoxListProps) => {
               style={{
                 marginTop: "10px",
                 background: "#FFF",
-                height: "14rem",
+                height: item.totalAverageScore ? '11rem' : "14rem",
                 padding: "10px 20px",
               }}
             >
@@ -144,13 +147,13 @@ const SearchBoxList = (props: SearchBoxListProps) => {
                   }
                 }}
               >
-                <View>任教科目：{item.teachingSubjects}</View>
-                <View>年纪班级：{item.ageClass}</View>
-                <View>授课时间：{item.teachingTime}</View>
-                <View>授课地点：{item.teachingPlace}</View>
-                {item.evaluatedNum && (
-                  <View>已评课人数：{item.evaluatedNum}</View>
-                )}
+                { item.teachingSubjects && <View>任教科目：{item.teachingSubjects}</View>}
+                { item.ageClass && <View>年纪班级：{item.ageClass}</View> }
+                { item.teachingTime && <View>授课时间：{item.teachingTime}</View> }
+                { item.teachingPlace && <View>授课地点：{item.teachingPlace}</View> }
+                { item.evaluatedNum && <View>已评课人数：{item.evaluatedNum}</View> }
+                { item.totalAverageScore && <View>总平均分：{item.totalAverageScore}</View>}
+                { item.numberEvaluators && <View>评课人数：{item.numberEvaluators}</View>}
               </View>
             </View>
           );
